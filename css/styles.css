@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box; /*No le sume nada*/
+    padding: 0;
+    margin: 0;
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.container{
+
+    background: linear-gradient(to bottom, skyblue, cornflowerblue);
+    height: 100vh;
+    width: 100%;
+    
+    
+}
+
+
+
+.cloud{
+    
+    position: absolute;
+    left: 0;
+    background-color: white;
+    border-radius: 1000px;
+    
+    animation: zoomies 20s infinite linear;
+    
+    
+}
+
+.cloud::before{
+    content: '';
+    position: absolute;
+    top: -80%;
+    left: 10%;
+    width: 50%;
+    height: 150%;
+    background: white;
+    border-radius: 50%;
+    
+}
+
+.cloud::after{
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: 20%;
+    width: 30%;
+    height: 100%;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud.one{
+    top: 50%;
+    width: 300px;
+    height: 100px;
+}
+
+.cloud.two{
+    top: 30%;
+    width: 60px;
+    height: 20px;
+    animation-duration: 40s;
+}
+
+.cloud.three{
+    top: 20%;
+    width: 120px;
+    height: 40px;
+    animation-duration: 50s;
+}
+
+.cloud.one{
+    top: 50%;
+    width: 300px;
+    height: 100px;
+}
+
+.luces{
+    
+    animation-name: mianimacion;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+   
+}
+
+.agrandar{
+
+    animation-name: agrandarRadio;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.radio{
+    
+    position: fixed;
+    margin-left: 30%;
+    margin-top: 10%;
+    width: 700px;
+    height: 400px;
+    background-color: #8c8c8c;
+    border: 10px solid black;
+    border-radius: 45px;
+
+    
+    
+}
+
+.circles{
+    display: flex;
+    
+}
+
+.circle{
+
+    width: 150px;
+    height: 230px;
+    background-color: #4f4f4f;
+    border-radius: 80px;
+    margin-left: 45px;
+    margin-top: 80px;
+    border: 10px solid black;
+    background-size: 500%;
+
+   
+   
+   
+}
+
+#two{
+    margin-left: 300px;
+    margin-right: 50px;
+
+    
+}
+
+.square{
+    position: fixed;
+    width: 210px;
+    height: 150px;
+    background-color: #4f4f4f;
+    margin-left: 230px;
+    margin-top: 120px;
+    border-radius: 15px;
+    border: 10px solid black;
+}
+
+
+.radio-button{
+    
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
+    width: 50px;
+    height: 50px;
+    background-color: #ec1d25;
+    border-radius: 50%;
+    border: 10px solid black;
+    cursor: pointer;
+}
+
+.radio-button:hover{
+    transform: scale(1.1);
+    transition-property: all;
+    transition-property: transform;
+}
+
+.normal-radio{
+    
+   animation-play-state: paused;
+
+   
+    
+}
+
+
+@keyframes mianimacion {
+    
+    0%{
+        background: #4C3F91;
+    }
+    25%{
+        background: #9145B6;
+    }
+    50%{
+        background: #B958A5;
+    }
+    75%{
+        background: #FF5677;
+    }
+    100%{
+        background: #4C3F91;
+    }
+}
+
+@keyframes agrandarRadio {
+    
+    0%{
+        width: 700px;
+        height: 400px;
+    }
+    50%{
+        width: 680px;
+        height: 380px;  
+        -moz-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    100%{
+        width: 700px;
+        height: 400px;
+    }
+}
+
+@keyframes zoomies {
+    
+    from{
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    to{
+        left: 100%;
+        transform: translateX(0%);
+    }
+}
+
+
+
