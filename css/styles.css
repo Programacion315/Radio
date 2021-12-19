@@ -104,10 +104,7 @@
     height: 400px;
     background-color: #8c8c8c;
     border: 10px solid black;
-    border-radius: 45px;
-
-    
-    
+    border-radius: 45px;  
 }
 
 .circles{
@@ -230,5 +227,11 @@
     }
 }
 
-
+@media screen and (max-width: 1100px){
+    
+    .radio{    
+        margin-left: 10%;
+           
+    }
+}
 
